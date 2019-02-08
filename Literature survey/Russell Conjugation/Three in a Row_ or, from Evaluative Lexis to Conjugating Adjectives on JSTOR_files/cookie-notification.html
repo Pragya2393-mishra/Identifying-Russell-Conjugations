@@ -1,0 +1,92 @@
+
+<!-- saved from url=(0062)https://static.ithaka.org/gdpr-banner/cookie-notification.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Cookie Banner</title>
+        <script type="text/javascript">
+            window.addEventListener("message", function(event) {
+                var message = {
+                    showBanner: false
+                },
+                storageKey = "cookieBanner",
+                setCloseButtonStyle = function(buttonElement) {
+                    buttonElement.style.float = "right";
+                    buttonElement.style.color = "#333";
+                    buttonElement.style.fontSize = "30px";
+                    buttonElement.style.position = "absolute";
+                    buttonElement.style.top = "-6px";
+                    buttonElement.style.right = "-25px";
+                    buttonElement.style.border = "0";
+                    buttonElement.style.backgroundColor = "inherit";
+                    buttonElement.style.margin = "0";
+                    buttonElement.style.padding = "0";
+                    buttonElement.style.fontWeight = "normal";
+                    buttonElement.style.fontFamily = "\"Arial\", \"Helvetica Neue\", \"Helvetica\", Arial, sans-serif";
+
+                    return buttonElement;
+                },
+                setBannerTextStyle = function(bannerTextElement) {
+                    bannerTextElement.style.margin = "auto 15%";
+                    bannerTextElement.style.maxWidth = "70%";
+                    bannerTextElement.style.position = "relative";
+                    bannerTextElement.style.fontFamily = "\"Arial\", \"Helvetica Neue\", \"Helvetica\", Arial, sans-serif";
+                    bannerTextElement.style.lineHeight = "20px";
+                    bannerTextElement.style.color = "#333";
+                    bannerTextElement.style.fontWeight = "normal";
+
+                    return bannerTextElement;
+                },
+                setBannerContainerStyle = function(bannerContainerElement) {
+                    bannerContainerElement.style.width = "100%";
+                    bannerContainerElement.style.backgroundColor = "#E8E8E8";
+                    bannerContainerElement.style.padding = "24px";
+                    bannerContainerElement.style.marginBottom = "15px";
+
+                    return bannerContainerElement;
+                };
+
+                try {
+                    if(event.data.status === "checkBanner") {
+                        var wasBannerDismissed = (localStorage.getItem(storageKey) === "true");
+
+                        if(!wasBannerDismissed) {
+                            var container = document.createElement("div"),
+                                banner = document.createElement("div"),
+                                bannerText = document.createElement("div"),
+                                closeButton = document.createElement("button");
+
+                            closeButton = setCloseButtonStyle(closeButton);
+                            closeButton.innerHTML = "&#215;";
+                            closeButton.id = "cookieBannerClose";
+
+                            bannerText = setBannerTextStyle(bannerText);
+                            bannerText.innerHTML = "This site uses cookies to provide you with a better experience. For information on our cookie policy, please visit <a href=\"https://www.ithaka.org/cookies\" target=\"_blank\" aria-label=\"Clicking this link will open a new tab.\" style=\"color: #006179; text-decoration: underline; border: 0;\">this page</a>. By continuing to use the site or closing this banner, you are agreeing to our terms of use.";
+                            bannerText.appendChild(closeButton);
+
+                            banner = setBannerContainerStyle(banner);
+                            banner.classList.add("gdpr-banner");
+                            banner.appendChild(bannerText);
+                            container.appendChild(banner);
+
+                            message.bannerHTML = container.innerHTML;
+                            message.showBanner = true;
+                        }
+                    }
+                    else if(event.data.status === "closedBanner") {
+                        localStorage.setItem(storageKey, true);
+                        message = {
+                            showBanner: false,
+                            status: "bannerClosed"
+                        }
+                    }
+                }
+                catch (error) {
+                    console.error(error);
+                }
+
+                event.source.postMessage(message, event.origin);
+            });
+        </script>
+    </head>
+    <body>
+
+</body></html>

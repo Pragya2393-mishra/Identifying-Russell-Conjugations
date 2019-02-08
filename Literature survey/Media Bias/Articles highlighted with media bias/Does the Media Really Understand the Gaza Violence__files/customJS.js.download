@@ -1,0 +1,4 @@
+window.addEventListener("hashchange", function() { scrollBy(0, -80) });
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})

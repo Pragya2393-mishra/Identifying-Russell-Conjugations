@@ -1,0 +1,15 @@
+.float-box-see-more .allsides-daily-row  > .bias-image img[title='Bias: Left']{
+left:0px;
+}
+.float-box-see-more .allsides-daily-row  > .bias-image img[title='Bias: Lean Left']{
+left:-15px;
+}
+.float-box-see-more .allsides-daily-row  > .bias-image img[title='Bias: Center']{
+left:-30px;
+}
+.float-box-see-more .allsides-daily-row  > .bias-image img[title='Bias: Lean Right']{
+left:-45px;
+}
+.float-box-see-more .allsides-daily-row  > .bias-image img[title='Bias: Right']{
+left:-60px;
+}

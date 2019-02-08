@@ -1,0 +1,73 @@
+// MAP 'utm_' PARAMETERS IN URL TO GLOBAL VARIABLES
+var campaign = getUrlParam('utm_campaign');
+var medium = getUrlParam('utm_medium');
+var source = getUrlParam('utm_source');
+
+// MAP GLOBAL VARS TO KIMBIA FORM METADATA
+function setMetadata(widget) {
+	widget.setMetaData("ga_campaign", campaign);
+	widget.setMetaData("ga_medium", medium);
+	widget.setMetaData("ga_source", source);
+}
+
+// TRACK NAME ACQUISITION
+function registerPageview(widget) {
+	// Submits a page view to the Analytics servers
+	_gaq.push(['_trackPageview','/KIMBIA/registerNameAcquisition']);
+}
+
+// TRACK DONOR ACQUISITION
+function registerECommerce(widget) {
+	// Submits a page view to the Analytics servers
+	_gaq.push(['_trackPageview','/KIMBIA/registerDonorAcquisition']);
+
+	// E-commerce Tracking
+	var confCode = widget.confirmationCode;
+    var initCharge = widget.initialCharge;
+	initCharge = initCharge.replace('$','');	// REMOVE $ FOR GA
+	initCharge = parseFloat(initCharge);		// FORMAT FOR GA
+
+	var city = getValueByLabel(widget.answers[0], 'Mailing Address', 'city');
+	var state = getValueByLabel(widget.answers[0], 'Mailing Address', 'state');
+	var country = getValueByLabel(widget.answers[0], 'Mailing Address', 'country');
+
+	_gaq.push(['_addTrans',
+		confCode,		// order ID - required
+		'KIMBIA',		// affiliation or store name
+		initCharge,		// total - required
+		'',				// tax
+		'',				// shipping
+		city,			// city
+		state,			// state or province
+		country			// country
+	]);
+	_gaq.push(['_addItem',
+		confCode,		// order ID - required
+		'Donation',		// SKU/code - required
+		initCharge,		// unit price - required
+		'1'				// quantity - required
+	]);
+	_gaq.push(['_trackTrans']);
+}
+
+// HELPER FUNCTIONS FOR WIDGET DATA
+function getValueByLabel(aSignup, labelText, sublabelText){
+	for(var a = 0; a < aSignup.length; a++){
+		var formAnswerObject = aSignup[a];
+		if(formAnswerObject.questionLabel === labelText){
+			if(sublabelText == null || sublabelText == '' || formAnswerObject.questionSubLabel == sublabelText) {
+				return formAnswerObject.data;
+			}
+		}
+	}
+	
+	// found none
+	return '';
+}
+function getUrlParam(name){
+    var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	if (!results) {
+	    return undefined;
+	}
+	return results[1];
+}

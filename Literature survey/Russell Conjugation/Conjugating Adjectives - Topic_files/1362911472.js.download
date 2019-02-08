@@ -1,0 +1,135 @@
+
+// request key: 5741DCEE8862936D98FE0418FA3B007F
+    
+// create all registered modules data obj that can be queried
+registeredModule = new Object();
+
+// BEGIN FORUM MODULES
+  
+  
+    registeredModule['252102301'] = new Object();
+    registeredModule['252102301'].type = 'ubbx';
+    registeredModule['252102301'].baseurl = 'http://wordcraft.infopop.cc/eve/forums' ;
+    
+    categoryViewPerm = new Object();// used to calculate cat view perm based on forum perms within it
+    
+    registeredModule['252102301'].createDataObj = function ubbx252102301() {
+        var i=0;
+   
+        this[i] = new Object();
+        this[i].text = 'Questions & Answers about Words';
+        this[i].value = '932607094';
+        this[i].perm = hasPerm(932607094, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['622607094'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'The Written Word';
+        this[i].value = '332607094';
+        this[i].perm = hasPerm(332607094, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['622607094'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'Potpourri';
+        this[i].value = '741603894';
+        this[i].perm = hasPerm(741603894, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['622607094'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'The Vocabulary Forum';
+        this[i].value = '756604565';
+        this[i].perm = hasPerm(756604565, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['622607094'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'Community';
+        this[i].value = '281603894';
+        this[i].perm = hasPerm(281603894, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['622607094'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'WoBoGro';
+        this[i].value = '8061068303';
+        this[i].perm = hasPerm(8061068303, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['622607094'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'Foreign Words';
+        this[i].value = '6351024471';
+        this[i].perm = hasPerm(6351024471, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['622607094'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'Links for Linguaphiles';
+        this[i].value = '1576025271';
+        this[i].perm = hasPerm(1576025271, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['622607094'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'Photographs Forum';
+        this[i].value = '6671045513';
+        this[i].perm = hasPerm(6671045513, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['622607094'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'Wordplay';
+        this[i].value = '410600694';
+        this[i].perm = hasPerm(410600694, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['3671077124'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'Word Games';
+        this[i].value = '1881077124';
+        this[i].perm = hasPerm(1881077124, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['3671077124'] = true; }; 
+        i++;
+        
+        this[i] = new Object();
+        this[i].text = 'Linguistics 101';
+        this[i].value = '5931033245';
+        this[i].perm = hasPerm(5931033245, ubbxfrm.vfrm);
+        if(this[i].perm) { categoryViewPerm['7521033245'] = true; }; 
+        i++;
+        
+        this.length = i;
+        this.siteid = '441607094';
+        this.servleturl = 'http://wordcraft.infopop.cc/eve/forums';
+    }
+
+// END FORUM MODULES
+
+// BEGIN CHAT MODULES
+  
+  
+    registeredModule['233106301'] = new Object();
+    registeredModule['233106301'].type = 'chime';
+    registeredModule['233106301'].baseurl =  'http://wordcraft.infopop.cc/eve/chat' ;
+       
+    registeredModule['233106301'].popup_height = '500';
+    registeredModule['233106301'].popup_width = '600';
+    registeredModule['233106301'].createDataObj = function chime233106301(){
+        var i=0;
+        
+        this[i] = new Object();
+        this[i].text = 'Wordcraft Chat Room';
+        this[i].value = '751103223';
+        i++;
+       
+    
+        this.length = i;
+        this.siteid = "441607094";
+        this.servleturl = "http://wordcraft.infopop.cc/eve/chat";
+    }
+
+// END CHAT MODULES
+
+registeredModulesLoaded = true;

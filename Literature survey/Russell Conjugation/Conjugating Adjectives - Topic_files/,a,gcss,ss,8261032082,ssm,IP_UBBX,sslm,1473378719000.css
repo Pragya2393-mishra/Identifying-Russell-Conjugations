@@ -1,0 +1,587 @@
+
+ 
+/* CSS from IP_PLATFORM styleset: #*115 Brown/tans softened OID: 8261032082  */ 
+
+/* forums module images */ 
+
+   
+   .ubb_add_photo{
+      width:16px;
+      height:17px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/add_photo.gif')
+   }
+    
+   .ubb_album_icon{
+      width:15px;
+      height:16px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/album.gif')
+   }
+    
+   .ubb_cat_content{
+      width:24px;
+      height:24px;
+      background-image: url('http://wordcraft.infopop.cc/infopop/ver1.3.7.2147483647/images3/city_off.gif')
+   }
+    
+   .ubb_cat_content_new{
+      width:24px;
+      height:24px;
+      background-image: url('http://wordcraft.infopop.cc/infopop/ver1.3.7.2147483647/images3/city_on.gif')
+   }
+    
+   .ubb_cat_minus{
+      width:9px;
+      height:9px;
+      background-image: url('http://wordcraft.infopop.cc/infopop/ver1.3.7.2147483647/images3/minus.gif')
+   }
+    
+   .ubb_cat_plus{
+      width:9px;
+      height:9px;
+      background-image: url('http://wordcraft.infopop.cc/infopop/ver1.3.7.2147483647/images3/plus.gif')
+   }
+    
+   .ubb_edit_album{
+      width:21px;
+      height:17px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/edit_album.gif')
+   }
+    
+   .ubb_edit_photo{
+      width:21px;
+      height:17px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/edit_photo.gif')
+   }
+    
+   .ubb_forum_content{
+      width:25px;
+      height:21px;
+      background-image: url('http://wordcraft.infopop.cc/infopop/ver1.3.7.2147483647/images3/house_off.gif')
+   }
+    
+   .ubb_forum_content_new{
+      width:25px;
+      height:21px;
+      background-image: url('http://wordcraft.infopop.cc/infopop/ver1.3.7.2147483647/images3/house_on.gif')
+   }
+    
+   .ubb_forward{
+      width:20px;
+      height:20px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/fast_forward.gif')
+   }
+    
+   .ubb_high_topic{
+      width:10px;
+      height:19px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/highlight.gif')
+   }
+    
+   .ubb_hot{
+      width:8px;
+      height:10px;
+      background-image: url('http://wordcraft.infopop.cc/infopop/ver1.3.7.2147483647/images3/hot.gif')
+   }
+    
+   .ubb_next{
+      width:11px;
+      height:9px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/next.gif')
+   }
+    
+   .ubb_pause{
+      width:20px;
+      height:20px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/pause.gif')
+   }
+    
+   .ubb_pause_on{
+      width:20px;
+      height:20px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/pause_on.gif')
+   }
+    
+   .ubb_photo_gallery{
+      width:11px;
+      height:12px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/gallery.gif')
+   }
+    
+   .ubb_play{
+      width:20px;
+      height:20px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/play.gif')
+   }
+    
+   .ubb_play_on{
+      width:20px;
+      height:20px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/play_on.gif')
+   }
+    
+   .ubb_poll{
+      width:14px;
+      height:11px;
+      background-image: url('http://wordcraft.infopop.cc/infopop/ver1.3.7.2147483647/images3/poll_new.gif')
+   }
+    
+   .ubb_post{
+      width:14px;
+      height:11px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/post_new.gif')
+   }
+    
+   .ubb_prev{
+      width:11px;
+      height:9px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/prev.gif')
+   }
+    
+   .ubb_rewind{
+      width:20px;
+      height:20px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/rewind.gif')
+   }
+    
+   .ubb_star_1{
+      width:54px;
+      height:9px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/1star.png')
+   }
+    
+   .ubb_star_2{
+      width:54px;
+      height:9px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/2stars.png')
+   }
+    
+   .ubb_star_3{
+      width:54px;
+      height:9px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/3stars.png')
+   }
+    
+   .ubb_star_4{
+      width:54px;
+      height:9px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/4stars.png')
+   }
+    
+   .ubb_star_5{
+      width:54px;
+      height:9px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/5stars.png')
+   }
+    
+   .ubb_email_a_friend{
+      width:101px;
+      height:20px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/email-a-friend-blue.png')
+   }
+    
+   .ubb_slideshow{
+      width:12px;
+      height:12px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/slideshow.gif')
+   }
+    
+   .ubb_album_post{
+      width:13px;
+      height:12px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/album_new.gif')
+   }
+    
+   .ubb_archive{
+      width:12px;
+      height:13px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/archive.gif')
+   }
+    
+   .ubb_shortcut{
+      width:11px;
+      height:11px;
+      background-image: url('http://wordcraft.infopop.cc/groupee_common/ver1.3.7.2147483647/styles/images/shortcut.gif')
+   }
+    
+
+  #ev_topic_reply_bot, #ev_topic_reply_bot TABLE {
+        text-align:right;}
+
+ /* TOPIC LIST (FRM) */
+
+    #ev_ubbx_frm TD.ev_ubbx_frm_posticon,
+    #ev_ubbx_frm TD.ev_ubbx_frm_title,
+    #ev_ubbx_frm TD.ev_ubbx_frm_lastreply{
+          background-color: #FDF2Cf;}
+
+    #ev_ubbx_frm TR.ev_ubbx_frm_featured A.ev_ubbx_frm_title_link {
+          font-weight:bold;}
+
+    #ev_ubbx_frm TD.ev_ubbx_frm_topicicon,
+    #ev_ubbx_frm TD.ev_ubbx_frm_posticon,
+    #ev_ubbx_frm TD.ev_ubbx_frm_author, #ev_ubbx_frm TH.ev_ubbx_frm_author,
+    #ev_ubbx_frm TD.ev_ubbx_frm_location, #ev_ubbx_frm TH.ev_ubbx_frm_location,
+    #ev_ubbx_frm TD.ev_ubbx_frm_replies,  #ev_ubbx_frm TH.ev_ubbx_frm_replies,
+    #ev_ubbx_frm TD.ev_ubbx_frm_views, #ev_ubbx_frm TH.ev_ubbx_frm_views,
+    #ev_ubbx_frm TD.ev_ubbx_frm_rating,#ev_ubbx_frm TH.ev_ubbx_frm_rating{
+          text-align:center;}
+
+
+     #ev_ubbx_frm TD.ev_ubbx_frm_topicicon,
+    #ev_ubbx_frm TD.ev_ubbx_frm_posticon,
+    #ev_ubbx_frm TD.ev_ubbx_frm_author, #ev_ubbx_frm TH.ev_ubbx_frm_author,
+    #ev_ubbx_frm TD.ev_ubbx_frm_location, #ev_ubbx_frm TH.ev_ubbx_frm_location,
+    #ev_ubbx_frm TD.ev_ubbx_frm_replies,  #ev_ubbx_frm TH.ev_ubbx_frm_replies,
+    #ev_ubbx_frm TD.ev_ubbx_frm_views, #ev_ubbx_frm TH.ev_ubbx_frm_views,
+    #ev_ubbx_frm TD.ev_ubbx_frm_rating,#ev_ubbx_frm TH.ev_ubbx_frm_rating,
+    #ev_ubbx_frm TH.ev_ubbx_frm_title,
+    #ev_ubbx_frm TH.ev_ubbx_frm_lastreply
+    {
+         font-size: 83%;}
+
+    #ev_ubbx_frm TD.ev_ubbx_frm_title {
+          font-size: 83%;}
+
+     #ev_ubbx_frm TD.ev_ubbx_frm_topicicon,
+     #ev_ubbx_frm TH.ev_ubbx_frm_topicicon,
+     TD.ev_ubbx_frm_topicicon,TH.ev_ubbx_frm_topicicon{
+            border-left-width:0px;}
+
+    #ev_ubbx_frm TD.ev_ubbx_frm_lastreply{
+          width:    30%;
+          font-size: 70%;}
+
+    #ev_ubbx_frm TD.ev_ubbx_frm_author {
+          width:    20%;}
+
+    div.ev_ubbx_frm_topiclead {
+          margin-left:10px;
+          margin-top:5px;}
+
+    #ev_ubbx_frm TD.ev_ubbx_frm_lastreply, #ev_ubbx_frm TH.ev_ubbx_frm_lastreply{
+          text-align:left;}
+
+ /* END TOPIC LIST (FRM) */
+
+    #ev_ubb_pa_tab {
+          margin-top:0px;
+          cursor:text;}
+
+    #pa_edit_island {
+          width:100%;
+          height:100%;}
+
+    .ev_pa_island {
+         border-width:1px;
+         background-color: #FDF2Cf;
+         padding:5px;
+       }
+
+   .ev_pa_island INPUT, .ev_pa_island TEXTAREA
+   {font-size: 70%;}
+
+
+      INPUT.ev_ubbx_pa_input, TEXTAREA.ev_ubbx_pa_input{
+          width:275px;}
+
+    .progressWrapper {
+        margin-top: 5px;
+        border: solid 1px #eb9967;
+        background-color: #FDF2Cf;
+        width: 357px;
+        overflow: hidden;
+    }
+
+    .progressContainer {
+        margin: 5px;
+        padding: 5px;
+        overflow: hidden;
+    }
+
+    .progressName {
+        font-size: 8pt;
+        font-weight: 700;
+    /*
+        color: #555;
+    */
+        width: 323px;
+        height: 14px;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .progressBarInProgress,
+    .progressBarComplete,
+    .progressBarError {
+        font-size: 0;
+        width: 0%;
+        height: 2px;
+        background-color: blue;
+        margin-top: 2px;
+    }
+
+    .progressBarComplete {
+        width: 100%;
+        background-color: green;
+        visibility: hidden;
+    }
+
+    .progressBarError {
+        width: 100%;
+        background-color: red;
+        visibility: hidden;
+    }
+
+    .progressBarStatus {
+        margin-top: 2px;
+        width: 337px;
+        font-size: 7pt;
+        font-family: Arial;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    a.progressCancel {
+        font-size: 0;
+        display: block;
+        height: 14px;
+        width: 14px;
+        background-image: url(/groupee_common/platform_images/cancel_button.gif);
+        background-repeat: no-repeat;
+        background-position: -14px 0px;
+        float: right;
+    }
+
+    a.progressCancel:hover {
+        background-position: 0px 0px;
+    }
+
+/* CATEGORY AND FORUMS (CFRM) SUMMARY PAGE*/
+
+      TABLE.ubbx_cfrm_cat_tbl {
+            border-width:1px;
+            border-bottom:0px;
+            background-color: #649BCD;
+            width:100%; }
+
+      TABLE.ubbx_cfrm_cat_tbl TD {
+            padding-top:10px;
+            padding-bottom:2px;
+            vertical-align:top;}
+
+      TABLE.ubbx_cfrm_cat_tbl * {
+            color: #ffffff;}
+
+      A.ubbx_cfrm_com_title_link {
+            font-size:83%;
+            font-weight:bold;}
+
+      TABLE.ubbx_cfrm_cat_tbl  A.ubbx_cfrm_com_title_link,
+      TABLE.ubbx_cfrm_cat_tbl  A.ubbx_cfrm_com_title_link:visited,
+      TABLE.ubbx_cfrm_cat_tbl  A.ubbx_cfrm_com_title_link:active {
+            color: #ffffff;}
+
+      .ubbx_cfrm_com_desc {
+            font-size:70%;}
+
+      TABLE.ubbx_cfrm_cat_tbl  .ubbx_cfrm_com_desc {
+            padding-top:3px;
+            padding-bottom:5px}
+
+      .ubbx_cfrm_cat_info{
+            font-size:70%;
+            text-align:right;
+            padding-right:17px;}
+
+      .ubbx_cfrm_cat_icon_plus {
+            position:relative;
+            top:+2px;
+            left:-10px;
+            cursor:pointer;}
+
+      TD.ubbx_cfrm_cat_icon {
+            text-align:center;
+            padding-left: 5px;
+            width:40px;}
+
+      TD.ubbx_cfrm_cat_icon IMG{
+            cursor:pointer;
+            border:0px;}
+
+      /* forum table only */
+      .ubbx_cfrm_mods_link {
+            font-size:70%;}
+
+      TABLE.ev_com_tbl TD.ev_forum_td_title,
+      TABLE.ev_com_tbl TD.ev_forum_td_lastreply {
+            text-align:left;
+            background-color:#FDF2Cf;}
+
+      TABLE.ev_com_tbl TD.ev_forum_td_lastreply {
+            font-size:70%;
+            width:    30%}
+
+      TR.ubbx_frm_topic_row TD {
+            font-size:83%;}
+
+      TABLE.ev_com_tbl TD.ev_forum_td_featuredtopic {
+            background-color:#FEF8E2;
+            text-align:left;
+            padding-left:12px;
+            background-repeat:no-repeat;
+            background-position:top left;}
+
+      TABLE.ev_com_tbl TD.ev_cfrm_post_count,
+      TABLE.ev_com_tbl TH.ev_cfrm_post_count,
+      TABLE.ev_com_tbl TD.ev_cfrm_topic_count,
+      TABLE.ev_com_tbl TH.ev_cfrm_topic_count {
+            text-align:center;
+            width:10%;}
+
+      TABLE.ev_com_tbl TH.ev_forum_td_icon {
+            border-left-width:0px;}
+
+      TABLE.ev_com_tbl TD.ev_cfrm_post_count,
+      TABLE.ev_com_tbl TD.ev_cfrm_topic_count{
+            font-size:83%;}
+
+      DIV.ev_cfrm_lp_icon {
+            position:absolute;
+            margin:3px;
+            display:inline;}
+
+      DIV.ev_cfrm_lp_info { }
+
+      #ubbx_cfrm_reg_member_count {
+            padding-top:     3px;}
+
+  /* Online Now Table */
+      TD.ev_onlinenow_table {
+            border-width:1px;
+            padding:5px;
+            padding-left:10px;
+            color: #000002;
+            background-color: #FDF2Cf;}
+
+/* Online Now Admin Status .ip-user-type-admin, .ip-user-type-mod*/
+    .ev_onlinenow_admin {
+          font-weight: bold;
+          text-decoration:underline;}
+
+/* NEW ALBUM TOPIC */
+      TABLE.ev_ubbx_album {
+            border-width:0px 1px;
+            width:100%;
+            background-color: #FEF8E2;
+            padding: 8px 0px 10px 10px;}
+
+/* ALBUM PAGES */
+
+      .ev_piclet_shell {
+            height:185px;
+            margin:7px 4px;
+            float:left;}
+
+      .ev_piclet {
+            border-width:1px;
+            padding:5px;
+            font-size: 70%;}
+
+      .ev_piclet_img {
+            padding:3px}
+
+      .ev_piclet_caption {
+            width:155px;}
+
+      .ev_piclet_title {
+            font-weight:bold;
+             width:140px;}
+
+      .ev_piclet_img {
+            text-align:center;}
+
+      .ev_piclet_reply {
+            text-align:right;}
+
+      /* Image Island Table  */
+      .ev_piclet_table {
+            width:155px;
+            height:155px;
+            border-width:1px;
+            background-color:#FEF8E2;}
+
+      /* Image Tools Postitioning  */
+      .ev_piclet_img_tools {
+            visibility:hidden;
+            position:relative;
+            left:+2px;
+            cursor:pointer;
+            text-align:right;}
+
+      /* Thumbnail Formatting  */
+      .ev_piclet_thumb {
+            border-width:1px; }
+
+      /* Play Control Button Down  */
+       .ev_buttondown {
+            position:relative;
+            top:+2px;
+            left:+2px}
+
+      /* Play Control Button Up  */
+      .ev_buttonup {
+            position:relative;
+            top:0px;
+            left:0px}
+
+      TABLE.ev_ms_content,TABLE.ev_ms_content TH, TABLE.ev_ms_content TD {
+            border-color:#649BCD;}
+
+ /* SEARCH FORM AND SEARCH RESULTS */
+
+      #ev_search_form {
+            background-color:#FDF2Cf;}
+
+      #ev_search_form TD {
+            font-size: 83%;
+            padding:5px;}
+
+      #ev_search_form TD.ev_search_title {
+            font-weight:bold;
+            padding-right:10px;
+            text-align:right;
+            width:25%;}
+
+      #ev_search_results DIV {
+            padding-left:15px;}
+
+      #ev_search_results DIV.ev_search_group {
+            padding-left:50px;}
+
+      /* END SEARCH FORM AND SEARCH RESULTS */
+
+  .leftContentTools, .rightContentTools {
+    padding-top: 10px;
+  }
+
+  .rightContentTools {
+    text-align: right;
+  }
+
+  .contentTool, .externalButton {
+    padding-right: 10px;
+  }
+
+  div.contentRatingWrapper {
+    width: 85px;
+    height: 18px;
+    padding-top: 3px;
+    vertical-align: middle;
+    float: right;
+  }
+
+  div.contentRatingWrapper div.stars {
+    border: 1px solid #eb9967;
+  }
+

@@ -1,0 +1,95 @@
+Drupal.behaviors.mrc960 = function (context) {
+	if(!$('body').data('init')) mrc960_init();
+	$('a.target-blank').attr('target', '_blank');
+}
+
+//functions to fire on initial page load
+function mrc960_init() {
+	// setup text focus field behavior
+	mrc960_search_autotext();
+	mrc960_email_autotext();
+  if ($('body').hasClass('node-type-video')) {
+    mrc960_video_embed();
+  }
+	
+	$('body').data('init', true);
+	
+	// make the blog headline clickable
+	$('body.front div.panel-col-last .pane-front-page-panel-pane-4 h2.pane-title').css('cursor', 'pointer').click(function() {
+	  window.location = '/blog';
+	}).css('position', 'relative');
+	
+	// print function inside of share this
+	$printIcon = $('#main-content div.share-this-mrc span.printable');
+	$printIcon.click(function(evt){
+	  evt.preventDefault()
+	  if (window.print) {
+	      window.print();  
+	  }
+	});
+}
+
+function mrc960_search_autotext() {
+	//misc_debug('setting autotext');
+	$searchbox = $('#site-header #search-box .form-text');
+	$searchbox.data('blurtext', 'Search MRC.org');
+	// if empty, set default text
+	$searchbox.blur(function(e){
+		if($(this).val() == '') $(this).val($(this).data('blurtext'));
+	});
+	// if default text, remove
+	$searchbox.focus(function(e){
+		if($(this).val() == $(this).data('blurtext')) $(this).val('');
+	});
+	$searchbox.blur();// trigger blur event
+}
+
+function mrc960_email_autotext() {
+	$emailbox = $('#signup #emailfield');
+	$emailbox.data('blurtext', 'Your Email Here');
+	// if empty, set default text
+	$emailbox.blur(function(e){
+		if($(this).val() == '') $(this).val($(this).data('blurtext'));
+	});
+	// if default text, remove
+	$emailbox.focus(function(e){
+		if($(this).val() == $(this).data('blurtext')) $(this).val('');
+	});
+	$emailbox.blur();// trigger blur event
+}
+
+function mrc960_video_embed() {
+
+  var embedcode = $('.flowplayer-processed').html();
+  embedcode = string_replace(embedcode, "/sites/all", "http://" + document.domain + "/sites/all");
+  embedcode = string_replace(embedcode, "&", "&amp;");;
+
+  $('.flowplayer').after('<div class="embedcode"></div>');
+  $('.embedcode').append('<textarea rows="5">' + embedcode + '</textarea>');
+  $('.embedcode').append('<label for="embedwidth">Width:</label><input name="embedwidth" class="embedwidth" value="100%" />');
+  $('.embedcode').append('<label for="embedheight">Height:</label><input name="embedheight" class="embedheight" value="100%" />');
+  $('.flowplayer').after('<a href="#" class="embedlink">Embed &raquo;</a>');
+
+  $('.embedlink').click(function(event) {
+    event.preventDefault();
+    $('.embedcode').toggle();
+  });
+
+  $('.embedwidth').blur(function() {
+    val = $('.embedcode textarea').val();
+    val = val.replace(/width="[^"]*"/, 'width="' + $(this).val() + '"');
+    $('.embedcode textarea').val(val);
+  })
+  $('.embedheight').blur(function() {
+    val = $('.embedcode textarea').val();
+    val = val.replace(/height="[^"]*"/, 'height="' + $(this).val() + '"');
+    $('.embedcode textarea').val(val);
+  })
+}
+
+/**
+ * Global plain text find and replace, faster and more readable that regex .replace().
+ */
+function string_replace(haystack, find, sub) {
+  return haystack.split(find).join(sub);
+}

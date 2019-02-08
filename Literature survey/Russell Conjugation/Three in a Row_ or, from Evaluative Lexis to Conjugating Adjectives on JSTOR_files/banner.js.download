@@ -1,0 +1,45 @@
+
+document.addEventListener("DOMContentLoaded", function() {
+    var bannerIframe = document.createElement("iframe");
+
+    bannerIframe.src = "https://static.ithaka.org/gdpr-banner/cookie-notification.html";
+    bannerIframe.id = "cookieBannerDisplay";
+    bannerIframe.height = bannerIframe.width = 0;
+    bannerIframe.style.display = "none";
+    bannerIframe.onload = function() {
+        function displayBanner(eventData) {
+            if(eventData.origin === "https://static.ithaka.org") {
+                try {
+                    if (eventData.data.showBanner) {
+                        var parser = new DOMParser(),
+                            bannerDocument = parser.parseFromString(eventData.data.bannerHTML, "text/html"),
+                            closeButton = bannerDocument.getElementById("cookieBannerClose"),
+                            bannerContents = bannerDocument.body.childNodes[0];
+
+                        document.body.insertBefore(bannerContents, document.body.firstChild);
+
+                        closeButton.addEventListener("click", function(event) {
+                            event.preventDefault();
+
+                            if (bannerContents.hasOwnProperty('remove')) {
+                                bannerContents.remove();
+                            }
+                            else { // IE and Mobile Safari
+                                document.body.removeChild(bannerContents); 
+                            }
+                            
+                            bannerIframe.contentWindow.postMessage({status: "closedBanner"}, "https://static.ithaka.org");
+                        });
+                    }
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+        }
+
+        window.addEventListener("message", displayBanner);
+        bannerIframe.contentWindow.postMessage({status: "checkBanner"}, "https://static.ithaka.org");
+    };
+
+    document.body.appendChild(bannerIframe);
+});

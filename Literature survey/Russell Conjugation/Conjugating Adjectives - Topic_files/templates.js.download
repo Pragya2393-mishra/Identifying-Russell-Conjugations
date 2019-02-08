@@ -1,0 +1,109 @@
+if (typeof Eve == 'undefined') {
+    Eve = {};
+}
+
+Eve.Templates = {
+    DEFAULT_TYPE: 'default',
+    EXISTS_TYPE: 'exists',
+    NOT_EXISTS_TYPE: '!exists',
+    isEmpty: function(value) {
+        return value==null || value=='';
+    },
+    blockPositions: function(template, blockWrapper) {
+        var startIndex = template.indexOf(blockWrapper);
+        if (startIndex < 0) {
+            return null;
+        }
+        var endIndex = template.indexOf(blockWrapper, startIndex+blockWrapper.length);
+        if (endIndex < 0) {
+            return null;
+        }
+
+        return {start: startIndex, end: endIndex};
+    },
+    removeBlock: function(template, blockWrapper, keepBlockContent) {
+        var positions = Eve.Templates.blockPositions(template, blockWrapper);
+
+        if (!positions) {
+            throw new Error("Invalid Template with invalid wrapper: "+blockWrapper);
+        }
+
+        var blockLength = blockWrapper.length;
+
+        if (keepBlockContent) {
+            var newTemplate = template.substring(0, positions.start);
+            newTemplate += template.substring(positions.start+blockLength, positions.end);
+            newTemplate += template.substring(positions.end+blockLength);
+
+            return newTemplate;
+        }
+
+        return template.substring(0, positions.start) + template.substring(positions.end+blockLength);
+    },
+    replace: function(templateId, targetId, params, onloadCallback) {
+        var template = document.getElementById(templateId);
+        if (template==null || Eve.Templates.isEmpty(template = template.value)) {
+            return;
+        }
+
+        var match;
+        while ((match = template.match(/{.*?}/))!=null) {
+            match = match.toString();
+
+            var paramName = match.substring(1, match.length-1);
+            var typeIndex = paramName.indexOf(":");
+            var type = Eve.Templates.DEFAULT_TYPE;
+            if (typeIndex!=-1) {
+                type = paramName.substring(0, typeIndex);
+                paramName = paramName.substring(typeIndex+1);
+            }
+
+            switch(type) {
+                case Eve.Templates.DEFAULT_TYPE:
+                    break;
+                case Eve.Templates.EXISTS_TYPE:
+                    template = Eve.Templates.removeBlock(
+                            template,
+                            match,
+                            params[paramName]
+                    );
+                    continue;
+                case Eve.Templates.NOT_EXISTS_TYPE:
+                    template = Eve.Templates.removeBlock(
+                            template,
+                            match,
+                            !params[paramName]
+                    );
+                    continue;
+                default:
+                    throw new Error("Failed parsing parameter by type: "+type);
+            }
+
+            var index = template.indexOf(match);
+            if (index<0) {
+                throw new Error("Unexpected error trying to find parameter: "+match);
+            }
+
+            var newTemplate = template.substring(0, index);
+            if (params[paramName]) {
+                newTemplate += params[paramName];
+            }
+            newTemplate += template.substring(index+match.length);
+
+            template = newTemplate;
+        }
+
+        var target = document.getElementById(targetId);
+        if (target) {
+            if (typeof Element != 'undefined' && typeof Element.update != 'undefined') {
+                Element.update(targetId, template);
+            } else {
+                target.innerHTML = template;
+            }
+
+            if (onloadCallback) {
+                onloadCallback();
+            }
+        }
+    }
+};
