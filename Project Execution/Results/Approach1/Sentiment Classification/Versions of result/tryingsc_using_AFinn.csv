@@ -1,0 +1,33 @@
+,x1,x2,y,l,score1,score2
+0,protest,disrupt,1,not present,-2,not present
+1,protest,demonstration,-1,-1,-2,-1
+2,protest,riot,1,0,-2,-2
+3,riot,protest,-1,0,-2,-2
+4,disrupt,protest,-1,not present,not present,-2
+5,demonstration,protest,1,1,-1,-2
+6,weird,freak,1,not present,-2,not present
+7,weird,crazy,1,0,-2,-2
+8,weird,wild,1,not present,-2,not present
+9,weird,liberated,-1,not present,-2,not present
+10,weird,individualistic,-1,not present,-2,not present
+11,liberated,weird,1,not present,not present,-2
+12,individualistic,weird,1,not present,not present,-2
+13,freak,weird,-1,not present,not present,-2
+14,crazy,weird,-1,0,-2,-2
+15,wild,weird,-1,not present,not present,-2
+16,leader,murderer,1,not present,not present,-2
+17,tyrant,despot,0,not present,not present,not present
+18,dictator,autocrat,0,not present,not present,not present
+19,easygoing,relaxed,0,not present,not present,2
+20,frugal,economical,0,not present,not present,not present
+21,weird,strange,0,-1,-2,-1
+22,firm,persistent,0,not present,not present,not present
+23,beg,plead,0,not present,not present,not present
+24,conservative,rightwing,0,not present,not present,not present
+25,polite,respectful,0,not present,not present,not present
+26,easygoing,carefree,0,not present,not present,1
+27,weird,strange,0,-1,-2,-1
+28,weird,quirky,0,not present,-2,not present
+29,firm,unyielding,0,not present,not present,not present
+30,firm,headstrong,0,not present,not present,not present
+31,polite,civil,0,not present,not present,not present
