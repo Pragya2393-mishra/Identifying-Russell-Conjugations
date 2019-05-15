@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Feb 17 18:19:34 2019
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Feb 17 18:19:34 2019
 
 @author: pragy
 """
