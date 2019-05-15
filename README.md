@@ -14,6 +14,7 @@
 #Project report and summary can be found in the folder : \Final report
  
 #Introduction to the project:
+
 Objective: To build and deploy a prototype bias-revealing browser plugin, which will reveal hidden sources of emotive bias (Russell Conjugates) in online rhetoric. The long-term goal of this project is to investigate the extent to which Russell conjugations are used to bias rhetoric, to develop tools to make readers aware of such rhetorical tricks, and to investigate how such tools affect readers’ perceptions of bias and evaluation of information. The scope of the current project is to build a browser plug-in that automatically
 a)	Identifies source of polarization in a rhetoric, i.e., emotively connotated words,
 b)	identify and present Russell Conjugates of these emotive words as an option to the user.
